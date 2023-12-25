@@ -34,7 +34,7 @@
   
 
  //json
- // this is the format of jason
+ // this is the format of json
  {
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<style>
+    *{
+        /* padding: 0;
+        margin: 0; */
+    }
+</style>
+<body style="background-color: bisque;"> 
+    <div>
+        <h1 id="title" class="heading">Learning DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi temporibus, atque rerum quibusdam placeat voluptatum voluptatem? Tempora, architecto. Earum cumque optio quos dolor nam expedita culpa rerum quasi accusantium quisquam!</p>
+    </div>
+    <ul >
+        <li class="list">one</li>
+        <li class="list">two</li>
+        <li class="list">three</li>
+    </ul>
+
+</body>
+<script>
+   let head = document.getElementById('title')
+   head.style.backgroundColor ='green'
+   head.style.color ="white"
+   head.style.padding='15px'
+   let uli =document.getElementsByClassName('list')
+   //handling html collection 
+// it will be each to apply loop in arrary 
+   let  arr = Array.from(uli)
+   arr.forEach(function(li){
+    li.style.color ='red'
+   })
+   
+
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM relation</title>
+</head>
+<body style="background-color: beige; color: rgb(131, 17, 165);">
+    <div class="parent">
+        <div class="days">sunday</div>
+        <div class="days">monday</div>
+        <div class="days">tuesaday</div>
+        <div class="days">wednesday</div>
+    </div>
+    
+</body>
+<script>
+let parent = document.querySelector('.parent')
+
+parent.children[0].style.color ='red'
+// console.log(parent.children[1 ].innerHTML)
+ for (let i = 0; i < parent.children.length; i++) {
+  let va = console.log(parent.children[i].innerHTML)
+
+    
+ }
+</script>
+</html>
