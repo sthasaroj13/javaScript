@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API call</title>
+</head>
+<style>
+    #cart{
+        outline: 5px solid red;
+        width: 30rem;
+        justify-content: center;
+        display: flex;
+        margin: auto;
+        border-radius: 5px;
+        
+        
+    }
+    #main{
+      
+    }
+</style>
+<body>
+
+    <div id="cart">
+<div id=" main">
+
+    <h1>GITHUB USER</h1>
+    <img src="" id="avatar" alt="" height="200px">
+    <p id="para1"></p>
+    <p id="para"></p>
+</div>
+    </div>
+</body>
+<script>
+    const apiuser ='https://api.github.com/users/hiteshchoudhary '
+    const xhr =new XMLHttpRequest()  // this is the object  for request
+    xhr.open('GET',apiuser) // for starting the request 
+    xhr.onreadystatechange = function (params) {
+        
+        console.log(xhr.readyState)
+        if (xhr.readyState=== 4) {
+
+            const data = JSON.parse(this.responseText) // most of the data come in string so to convert  we use parse to convert into json
+            console.log(data)
+            document.getElementById('avatar').src =data.avatar_url
+            document.getElementById('para').innerText = 'His followers in github is :' +data.followers
+            document.getElementById('para1').innerText = 'Name of User :' +data.name
+        }
+    }
+    xhr.send()
+</script>
+</html>

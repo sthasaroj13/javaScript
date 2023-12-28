@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Event</title>
+</head>
+<body style="background-color: grey;">
+    <ul id="images">
+        <li><img src="https://images.pexels.com/photos/10498570/pexels-photo-10498570.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""  width="150px" id="xmas1"></li>
+        <li><img src="https://images.pexels.com/photos/6037848/pexels-photo-6037848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""  width="150px" id="xmas2"></li>
+        <li><img src="https://images.pexels.com/photos/15430700/pexels-photo-15430700/free-photo-of-a-couple-kissing-in-the-rain-on-a-black-and-white-photo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            alt=""  width="150px" id="love"></li>
+        <li> <a style="color: aliceblue;"  href="https://www.google.com/" id="google">google</a></li>
+       
+    </ul>
+</body>
+<script>
+    // you can do from this approach but this  is wrong approach becasue it will not give many info and features 
+//     document.getElementById('love').onclick = function(){
+//  alert('love is life')
+//     }
+// document.getElementById('love').addEventListener('click',function(){
+// alert('love is life')
+// })
+
+
+ // you have to  see event about
+    // type ,timestamp ,defautPrevend,traget ,toElement,sourceElemet ,currrentTarget
+    //clientX .clientY  screenX screenY altKey controlKey
+
+//  so there are two types of event  event capcture and bubbling  
+//  in event bubbling the default  value is false and it goes from inner to outer like from li to ul  and vice-versa
+// document.getElementById('images').addEventListener('click',function(e){
+
+//    console.log("click the ul")
+
+
+// },false) // false is default
+// document.getElementById('love').addEventListener('click',function(e){
+
+// console.log("click the love")
+// e.stopPropagation() // it will stop and dont bubble
+
+
+
+// },false) 
+// document.getElementById('google').addEventListener('click',(e)=>{
+// e.preventDefault() 
+// e.stopPropagation()
+// console.log('google clicked')
+// })    
+
+
+document.querySelector('#images').addEventListener('click',function(e){
+console.log(e.target.parentNode) // parent node target the main node of targeted node
+if (e.target.tagName ==='IMG') {
+    console.log(e.target.id)
+    let removeIT = e.target.parentNode
+removeIT.remove()  
+}
+
+
+
+},false)
+</script>
+</html>

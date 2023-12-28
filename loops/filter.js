@@ -7,7 +7,7 @@ coding.forEach( (items)=>{
 //for each ma return hudaina 
 
 
-
+// filter is for creating a new array with elements that meet a specified condition.
 //filter la return dinxa
 const mynum =[1,5,3,5,6,7]
 // const mumb =mynum.filter((num)=> {

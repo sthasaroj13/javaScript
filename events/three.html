@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Event Two</title>
+</head>
+<body>
+    <h1 id="h"> Event in js</h1>
+    <button id="btn">start</button>
+    <button id="stop">stop</button>
+    <p id="para"></p>
+
+</body>
+<script>
+ const start= document.querySelector('#btn')
+ const stop= document.querySelector('#stop')
+ let intervalId;
+const f =start.addEventListener('click',function () {
+    intervalId =setInterval( function () {
+        console.log('hello k xa ')
+    //  document.getElementById('para').innerHTML ="hello" 
+    
+ },1000)  
+//   setInterval(suru,1000)
+});
+ stop.addEventListener('click',function () {
+  
+  clearInterval(intervalId)
+})
+
+  
+</script>
+</html>
