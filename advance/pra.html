@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+   
+</body>
+<script>
+
+
+   
+    fetch('https://api.github.com/users/hiteshchoudhary ')
+    .then(function(response){
+        return response.json()
+    }).then(function(data){
+        document.getElementById('para').innerText = 'the followers of hitesh is :' +data.followers
+    }).catch(function(error){
+        document.getElementById('para').innerText ='error is occur'
+    })
+</script>
+</html>
