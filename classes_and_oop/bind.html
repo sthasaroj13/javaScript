@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button>Click</button>
+</body>
+<script>
+    
+    class User{
+        constructor(){
+            this.user = "saroj"
+            this.server ="http/localhost/30"
+            
+            document.querySelector('button').addEventListener('click',this.handleclick.bind(this))
+            
+        }
+        //requiremnt
+        // this method is used after the clicking the button  and when we click the button  handleclick is call 
+        // so to call the this.user and this.server  the  we have to  insert bind in button
+        handleclick(){
+            console.log('hello user you click the button')
+            console.log(this)
+        }
+    }
+
+const  user = new User()
+
+</script>
+</html>

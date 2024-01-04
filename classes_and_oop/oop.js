@@ -15,7 +15,7 @@ console.log(user.getuserdb())
 
 //constructor function 
 // new keyword 
--create empty object {}
+// -create empty object {}
 // -constructor function call
 // - this keyword inject
 
@@ -25,7 +25,7 @@ console.log(user.getuserdb())
 //  const date = new Date()
 
 //   example of constructor  function
-
+/** testing */
  function User(username,age,password){
     this.username= username
     this.age=age
