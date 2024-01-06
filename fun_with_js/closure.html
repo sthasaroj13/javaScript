@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function  Parent(){
+        let name = 'saroj'
+        // console.log('son ko  variable ligxu',username); 
+        // parent la afno son ko variable ligna mildaina only dina matra milxa 
+        function son(){
+            let username ='samrat'
+            console.log('Parent ko  variable ligxu',name);
+        }
+        son()
+        function daughter(){
+            // console.log('dai ko variable',username)
+            // it cannot take the variable of sibling 
+        }
+        daughter()
+    }
+    Parent()
+</script>
+</html>
