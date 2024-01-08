@@ -19,6 +19,6 @@ class Teacher extends User{
     console.log(`New Course is added by :${this.username}`);
     }
 }
-const saro = new Teacher('ram','ram@gmail.com','123ram');
+const saro = new Teacher('ram thapa','ram@gmail.com','123ram');
 const saroj = new Teacher('sita','sita@gmail.com','123ram');
 saro.addCourse()

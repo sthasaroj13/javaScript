@@ -34,4 +34,5 @@ String.prototype.truelength =  function(){
     console.log(`the true length is :${this.trim().length}`)
 }
 username.truelength()
-'bodhan Dhakal'.truelength()
+'bodhan Dhakal '.truelength()
+'sachin'.truelength()
