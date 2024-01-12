@@ -23,3 +23,21 @@ function add(num1,num2){
     return total
 }
 console.log(add(ball1,ball2))
+// so iife is imeditately invoking function
+ //  last example 
+  
+  const Maths =(function  (a,b){
+    let  add = a+b
+    let sub = a-b
+    let divide =a/b
+
+     return`The add is :${add}  The sub is :${sub} & The divide is:${divide}`
+ })(2,2);
+ console.log(Maths);
+  
+
+ const math1 ={
+    add : 'a+b'
+ }
+ 
+ console.log(math1);

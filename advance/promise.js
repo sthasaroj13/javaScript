@@ -2,7 +2,7 @@
 
 
 const promiseOne = new Promise( function(resolve,reject){
-// it is used to do an async tasak
+// it is used to do an async task
 //Db calls,  cryptography and network call
     setTimeout( function(){
 
